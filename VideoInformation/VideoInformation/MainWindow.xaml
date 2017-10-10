@@ -1,0 +1,22 @@
+﻿<Window x:Class="VideoInformation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="700" Width="1000">
+    <Grid>
+        <DataGrid Name="MainDataGrid" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Height="551" Width="972" AutoGenerateColumns="False" ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="File Name" Binding="{Binding FileName}"/>
+                <DataGridTextColumn Header="Duration" Binding="{Binding Duration}"/>
+                <DataGridTextColumn Header="Total Bit Rate" Binding="{Binding TotalBitRate}"/>
+                <DataGridTextColumn Header="Height" Binding="{Binding Height}"/>
+                <DataGridTextColumn Header="Width" Binding="{Binding Width}"/>
+                <DataGridTextColumn Header="File Location" Binding="{Binding FileLocation}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Image HorizontalAlignment="Left" Height="100" Margin="882,10,0,0" VerticalAlignment="Top" Width="100" />
+        <TextBox Name="FilePathTextBox" HorizontalAlignment="Left" Height="23" Margin="10,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="972" IsEnabled="False"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="880,0,0,570" VerticalAlignment="Bottom" Width="100" Click="Button_Click" Height="56"/>
+        <ProgressBar Name="MainProgressBar" HorizontalAlignment="Left" Height="56" Margin="10,35,0,0" VerticalAlignment="Top" Width="867" />
+
+    </Grid>
+</Window>
